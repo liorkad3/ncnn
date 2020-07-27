@@ -63,6 +63,7 @@ set(__LAYER_TYPE_ENUM_INDEX 0)
 set(__LAYER_SHADER_TYPE_ENUM_INDEX 0)
 
 # layer implementation
+ncnn_add_layer(Slicing)
 ncnn_add_layer(AbsVal)
 ncnn_add_layer(ArgMax OFF)
 ncnn_add_layer(BatchNorm)

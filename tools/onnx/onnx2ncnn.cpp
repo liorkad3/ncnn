@@ -1968,7 +1968,18 @@ int main(int argc, char** argv)
         }
         else if (op == "Slice")
         {
-            fprintf(pp, "%-16s", "Crop");
+            //nav
+            std::vector<int> steps_ = get_node_attr_ai(node, "steps");
+            bool isCropSupported = true;
+            for (int i = 0; i < (int)steps_.size(); i++)
+            {
+                if(steps_[i] != 1){
+                    isCropSupported = false;
+                }
+            }
+            fprintf(stderr, "crop supported: %d, steps size = %d \n", isCropSupported, steps_.size());
+            std::string layerName = isCropSupported ? "Crop":"Slicing";
+            fprintf(pp, "%-16s",  "Slicing");
         }
         else if (op == "Softmax")
         {
@@ -3152,6 +3163,7 @@ int main(int argc, char** argv)
         }
         else if (op == "Slice")
         {
+            //nav
             std::vector<int> starts;
             std::vector<int> ends;
             std::vector<int> axes;
@@ -3173,12 +3185,21 @@ int main(int argc, char** argv)
                     steps = get_node_attr_from_input_ai(weights[node.input(4)]);
             }
 
-            // assert step == 1
-            for (int i = 0; i < (int)steps.size(); i++)
+            // print all data to terminal
+            for (int i = 0; i < (int)starts.size(); i++)
             {
-                if (steps[i] != 1)
-                    fprintf(stderr, "Unsupported slice step !\n");
+                fprintf(stderr, "start #%d = %d !\n", i, starts[i]);
+                fprintf(stderr, "end #%d = %d !\n", i, ends[i]);
+                fprintf(stderr, "axis #%d = %d !\n", i, axes[i]);
+                fprintf(stderr, "step #%d = %d !\n", i, steps[i]);
             }
+
+            // assert step == 1
+            // for (int i = 0; i < (int)steps.size(); i++)
+            // {
+            //     if (steps[i] != 1)
+            //         fprintf(stderr, "Unsupported slice step !\n");
+            // }
 
             // filter out N-dim axis
             if (!axes.empty())
@@ -3220,6 +3241,11 @@ int main(int argc, char** argv)
 
                     fprintf(pp, ",%d", axis);
                 }
+            }
+            fprintf(pp, " -23312=%d", (int)steps.size());
+            for (int i = 0; i < (int)steps.size(); i++)
+            {
+                fprintf(pp, ",%d", steps[i]);
             }
         }
         else if (op == "Softmax")
