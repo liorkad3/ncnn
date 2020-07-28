@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/test_shufflechannel.dir/test_shufflechannel.cpp.o  -o test_shufflechannel ../src/libncnn.a -lgomp -lpthread 

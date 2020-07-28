@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/test_permute.dir/test_permute.cpp.o  -o test_permute ../src/libncnn.a -lgomp -lpthread 

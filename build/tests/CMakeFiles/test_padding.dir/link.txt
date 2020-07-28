@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/test_padding.dir/test_padding.cpp.o  -o test_padding ../src/libncnn.a -lgomp -lpthread 

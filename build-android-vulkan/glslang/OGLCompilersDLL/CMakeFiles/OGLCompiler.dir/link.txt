@@ -1,0 +1,2 @@
+/home/liork/android-ndk-r21d/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar qc libOGLCompiler.a  CMakeFiles/OGLCompiler.dir/InitializeDll.cpp.o
+/home/liork/android-ndk-r21d/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib libOGLCompiler.a
