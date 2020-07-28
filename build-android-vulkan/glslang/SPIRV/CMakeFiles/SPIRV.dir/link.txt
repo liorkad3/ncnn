@@ -1,2 +1,0 @@
-/home/liork/android-ndk-r21d/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar qc libSPIRV.a  CMakeFiles/SPIRV.dir/GlslangToSpv.cpp.o CMakeFiles/SPIRV.dir/InReadableOrder.cpp.o CMakeFiles/SPIRV.dir/Logger.cpp.o CMakeFiles/SPIRV.dir/SpvBuilder.cpp.o CMakeFiles/SPIRV.dir/SpvPostProcess.cpp.o CMakeFiles/SPIRV.dir/doc.cpp.o CMakeFiles/SPIRV.dir/SpvTools.cpp.o CMakeFiles/SPIRV.dir/disassemble.cpp.o
-/home/liork/android-ndk-r21d/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib libSPIRV.a

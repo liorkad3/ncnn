@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/test_innerproduct.dir/test_innerproduct.cpp.o  -o test_innerproduct ../src/libncnn.a -lgomp -lpthread 

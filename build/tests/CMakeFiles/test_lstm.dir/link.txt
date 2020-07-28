@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/test_lstm.dir/test_lstm.cpp.o  -o test_lstm ../src/libncnn.a -lgomp -lpthread 

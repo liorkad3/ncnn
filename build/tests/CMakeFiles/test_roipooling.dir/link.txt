@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/test_roipooling.dir/test_roipooling.cpp.o  -o test_roipooling ../src/libncnn.a -lgomp -lpthread 

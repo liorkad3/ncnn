@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/test_instancenorm.dir/test_instancenorm.cpp.o  -o test_instancenorm ../src/libncnn.a -lgomp -lpthread 

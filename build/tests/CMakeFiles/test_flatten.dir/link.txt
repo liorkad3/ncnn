@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/test_flatten.dir/test_flatten.cpp.o  -o test_flatten ../src/libncnn.a -lgomp -lpthread 
