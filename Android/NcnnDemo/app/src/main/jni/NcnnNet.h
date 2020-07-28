@@ -1,0 +1,6 @@
+
+#ifndef NCNNDEMO_NCNNNET_H
+#define NCNNDEMO_NCNNNET_H
+
+
+#endif //NCNNDEMO_NCNNNET_H
