@@ -9,6 +9,7 @@ int Slicing::load_param(const ParamDict& pd)
     ends = pd.get(10, Mat());
     axes = pd.get(11, Mat());
     steps = pd.get(12, Mat());
+    
     return 0;
 }
 
@@ -156,7 +157,7 @@ void Slicing::resolveAxisParams(const Mat& bottom_blob,  AxisParams* sp) const{
 
         // resolve out size
         //todo if is odd number
-        sp[axis].out_size = ( abs(sp[axis].end - sp[axis].start)+1 ) / abs(sp[axis].step) ;
+        sp[axis].out_size = floor(( abs(sp[axis].end - sp[axis].start) ) / abs(sp[axis].step)) + 1 ;
         NCNN_LOGE("axisParam: [a=%d, sp=%d, st=%d, e=%d, out=%d]", axis, sp[axis].step,
          sp[axis].start, sp[axis].end, sp[axis].out_size);
     }

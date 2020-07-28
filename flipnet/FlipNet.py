@@ -7,8 +7,10 @@ class Flip(nn.Module):
         super().__init__()
     
     def forward(self, x):
-        xt = x[:, :, 0::2, :]
-        y = torch.flip(xt, [2])
+        xf = torch.flip(x, [2])
+        y1 = xf[:, :, 0::2, :]
+        y2 = xf[:, :, 1::2, :]
+        y = torch.cat((y1, y2), dim=2)
         return y
 
 if __name__ == "__main__":

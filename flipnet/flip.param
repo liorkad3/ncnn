@@ -1,5 +1,8 @@
 7767517
-3 3
+6 7
 Input            input                    0 1 input
-Slicing          Slice_4                  1 1 input 5 -23309=1,0 -23310=1,-1 -23311=1,1 -23312=1,2
-Slicing          Slice_9                  1 1 5 output -23309=1,-1 -23310=1,1 -23311=1,1 -23312=1,-1
+Slicing          Slice_4                  1 1 input 5 -23309=1,-1 -23310=1,1 -23311=1,1 -23312=1,-1
+Split            splitncnn_0              1 2 5 5_splitncnn_0 5_splitncnn_1
+Slicing          Slice_9                  1 1 5_splitncnn_1 10 -23309=1,0 -23310=1,-1 -23311=1,1 -23312=1,2
+Slicing          Slice_14                 1 1 5_splitncnn_0 15 -23309=1,1 -23310=1,-1 -23311=1,1 -23312=1,2
+Concat           Concat_15                2 1 10 15 output 0=1
